@@ -22,7 +22,7 @@ body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 19px;
 }
 
 /* Change the color of links on hover */
@@ -35,4 +35,27 @@ body {
 .topnav a.active {
     background-color: #04AA6D;
     color: white;
+}
+
+.topnav a.profile-img {
+    float: right;
+}
+
+.carousel {
+    margin: 10px;
+    padding: 0;
+    background: red;
+}
+
+.carousel * {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    display: inline-block;
+    background: blue;
+}
+
+.profile-img img {
+    border-radius: 25%;
 }
