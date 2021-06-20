@@ -1,0 +1,44 @@
+function Test() {
+    window.alert("ok")
+}
+
+function Film(id, name, picture) {
+    this.id = id;
+    this.name = name;
+    this.picture = picture;
+
+    function LoadDetails() {
+        //todo implement details page
+    }
+}
+
+function FilmList(title) {
+    this.title = title;
+    this.films = [
+        new Film(0, "Vikings", "../Resources/example01.jpg"),
+        new Film(1, "The Witcher", "../Resources/example02.jpg"),
+        new Film(2, "Mobile Suit Gundam", "../Resources/example03.jpg"),
+        new Film(3, "Star Trek Discovery", "../Resources/example04.jpg"),
+        new Film(4, "KIN", "../Resources/example05.jpg"),
+        new Film(5, "Unser Planet", "../Resources/example06.jpg")
+    ];
+}
+
+//Temporary method to insert new areas for a film list
+function LoadFilmLists() {
+    let list = [];
+    list.push(new FilmList("Leider geil"));
+    list.push(new FilmList("Thriller"));
+    list.push(new FilmList("Neu bei uns"));
+    list.push(new FilmList("Filled"));
+    return list;
+}
+
+//Main ViewModel
+function AppViewModel() {
+    this.film_list = LoadFilmLists();
+}
+
+// Activates knockout.js
+ko.applyBindings(new AppViewModel());
+
