@@ -1,5 +1,6 @@
 html {
     font-family: "Arial", serif;
+    color: #dddddd;
 }
 
 body {
@@ -43,11 +44,10 @@ body {
     padding: 0;
 }
 
-.carousel * {
-    max-height: 150px;
+.carousel img {
     margin: 2px;
-    display: inline-block;
-    background: blue;
+    display: inline;
+    background: orange;
 }
 
 .carousel img:hover {
