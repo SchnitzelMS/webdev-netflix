@@ -1,7 +1,3 @@
-function Test() {
-    window.alert("ok")
-}
-
 function Film(id, name, picture) {
     this.id = id;
     this.name = name;
