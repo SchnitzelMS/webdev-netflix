@@ -47,7 +47,6 @@ body {
 .carousel img {
     margin: 2px;
     display: inline;
-    background: orange;
 }
 
 .carousel img:hover {
