@@ -1,6 +1,10 @@
-function Film(id, name, picture) {
+function Film(id, name, director, year, description, actor, picture) {
     this.id = id;
     this.name = name;
+    this.director = director;
+    this.year = year;
+    this.description = description;
+    this.actor = actor;
     this.picture = picture;
 }
 
