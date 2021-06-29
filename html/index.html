@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Netflix</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="../css/index.css" rel="stylesheet">
@@ -15,10 +14,6 @@
 
 <div class="topnav">
     <a class="active" href="index.html">Home</a>
-    <a>Filme</a>
-    <a>Serien</a>
-    <a>Neu und Beliebt</a>
-    <a>Meine Liste</a>
     <a class="profile-img">
         <img src="../Resources/avatarUser01.jpg" alt="User0Avatar">
     </a>
@@ -29,21 +24,36 @@
     <div class="film-list">
         <h1 data-bind="text: title"></h1>
         <div data-bind="foreach: films" class="carousel">
-            <img data-bind="attr: {src: $data.picture, alt: $data.name}"/>
+            <img data-bind="attr: {src: $data.picture, alt: $data.name}, click: $root.loadDetails"/>
         </div>
 
     </div>
 </div>
 
-
-<div class="viewDetails" data-bind="with: chosenMediaData">
-    <!--<img data-bind="attr: {src: picture, alt: name}"/> -->
-    <h4 data-bind="text: loadDetails"></h4>
+<div class="modal" tabindex="-1" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content" data-bind="with: current">
+            <div class="modal-header">
+                <h5 class="modal-title" data-bind="text: name">45</h5>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">X</button>
+            </div>
+            <div class="modal-body">
+                <p data-bind="text: year"></p>
+                <p data-bind="text: director"></p>
+                <p data-bind="text: actor"></p>
+                <p data-bind="text: description"></p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-latest.js"></script>
+
+<script src="../scripts/knockout-mapping.js"></script>
+<script src="../scripts/repository.js"></script>
 <script src="../scripts/main.js"></script>
 </body>
 </html>
