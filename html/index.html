@@ -20,17 +20,35 @@
 </div>
 
 <!-- Carousel -->
+
 <div data-bind="foreach: film_list">
     <div class="film-list">
         <h1 data-bind="text: title"></h1>
         <div data-bind="foreach: films" class="carousel">
-            <img data-bind="attr: {src: $data.picture, alt: $data.name}, click: $root.loadDetails"/>
+            <img data-bind="attr: {src: $data.picture, alt: $data.name}, event: { mouseover: $root.enableInfo, mouseout: $root.disableInfo }, click: $root.loadDetails"/>
+            <div data-bind="visible: $root.infoEnabled">
+                <h6 data-bind="text: name"></h6>
+                <span data-bind="text: year"></span>
+                <span data-bind="text: director"></span>
+            </div>
         </div>
-
     </div>
 </div>
 
-<div class="modal" tabindex="-1" id="myModal">
+
+<div class="modal" id="infoModal">
+    <div class="modal-dialog">
+        <div class="modal-content" data-bind="with: current">
+            <h5 class="modal-title" data-bind="text: name"></h5>
+            <div class="modal-body">
+                <span data-bind="text: year"></span>
+                <span data-bind="text: director"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal">
     <div class="modal-dialog">
         <div class="modal-content" data-bind="with: current">
             <div class="modal-header">
@@ -38,6 +56,9 @@
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">X</button>
             </div>
             <div class="modal-body">
+                <div>
+                    <img data-bind="attr: {src: $data.picture, alt: $data.name}, click: $root.loadDetails"/>
+                </div>
                 <p data-bind="text: year"></p>
                 <p data-bind="text: director"></p>
                 <p data-bind="text: actor"></p>
