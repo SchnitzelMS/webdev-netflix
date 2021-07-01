@@ -6,11 +6,14 @@ function GetFilms() {
             title: "Neue Filme",
             films: [
                 {
-                    name: "2010 Das Jahr, in dem wir Kontakt aufnahmen",
+                    name: "The Witcher",
                     director: "Keine Ahnung",
                     year: "19xx",
-                    description: "Wir fliegen wieder zum Jupiter oder so",
-                    actor: "Gab ein paar",
+                    description: "Der Hexer Geralt von Riva kämpft um einen Platz in der Welt und für Gold gegen gefährliche Monster. Gegen seinen Willen wird er in politische Intrigen und die Machenschaften der Zauberin Yennefer von Vengerberg verwickelt.",
+                    actor: "Henry Cavill (Geralt von Riva)\n" +
+                        "Anya Chalotra (Yennefer)\n" +
+                        "Freya Allan (Princess Cirilla of Cintra)\n" +
+                        "Joey Batey (Rittersporn)\n",
                     picture: "../Resources/example02.jpg"
                 },
                 {
