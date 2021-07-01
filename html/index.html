@@ -19,36 +19,30 @@
     </a>
 </div>
 
-<!-- Carousel -->
+<!-- details page -->
+
+<div data-bind="visible: infoEnabled">
+    <h1 style="color: white">djhsfkgasdfgasj</h1>
+
+</div>
+
+
+<!-- film Carousel -->
 
 <div data-bind="foreach: film_list">
     <div class="film-list">
         <h1 data-bind="text: title"></h1>
         <div data-bind="foreach: films" class="carousel">
-            <img data-bind="attr: {src: $data.picture, alt: $data.name}, event: { mouseover: $root.enableInfo, mouseout: $root.disableInfo }, click: $root.loadDetails"/>
-            <div data-bind="visible: $root.infoEnabled">
-                <h6 data-bind="text: name"></h6>
-                <span data-bind="text: year"></span>
-                <span data-bind="text: director"></span>
-            </div>
+            <img data-bind="
+            attr: {src: $data.picture, alt: $data.name},
+            click: $root.loadDetails"/>
         </div>
     </div>
 </div>
 
+<!-- modal for small information for a film -->
 
-<div class="modal" id="infoModal">
-    <div class="modal-dialog">
-        <div class="modal-content" data-bind="with: current">
-            <h5 class="modal-title" data-bind="text: name"></h5>
-            <div class="modal-body">
-                <span data-bind="text: year"></span>
-                <span data-bind="text: director"></span>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal" id="myModal">
+<div class="modal" id="film-info-modal">
     <div class="modal-dialog">
         <div class="modal-content" data-bind="with: current">
             <div class="modal-header">
@@ -56,13 +50,13 @@
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">X</button>
             </div>
             <div class="modal-body">
-                <div>
-                    <img data-bind="attr: {src: $data.picture, alt: $data.name}, click: $root.loadDetails"/>
-                </div>
-                <p data-bind="text: year"></p>
-                <p data-bind="text: director"></p>
-                <p data-bind="text: actor"></p>
+                <img data-bind="attr: {src: $data.picture, alt: $data.name}"/>
                 <p data-bind="text: description"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" data-bind="click: $root.loadDetailsPage" data-bs-dismiss="modal">Show
+                    more
+                </button>
             </div>
         </div>
     </div>

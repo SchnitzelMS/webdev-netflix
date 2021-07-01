@@ -25,7 +25,7 @@ body {
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: rgba(225, 62, 61, 0.98);
     color: white;
 }
 
@@ -55,7 +55,6 @@ body {
 
 .carousel img:hover {
     transform: scale(1.2);
-
 }
 
 .film-list {
