@@ -67,10 +67,6 @@ body {
     color: #dddddd;
 }
 
-.shortInfos{
-    padding: 25px;
-}
-
 .info-site{
     padding: 10% 10%;
     color: whitesmoke;
@@ -79,7 +75,3 @@ body {
 .info-site h1{
     padding-bottom: 10px
 }
-
-.info-site img{
-}
-
