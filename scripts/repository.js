@@ -7,8 +7,9 @@ function GetFilms() {
             films: [
                 {
                     name: "The Witcher",
-                    director: "Keine Ahnung",
-                    year: "19xx",
+                    director: "Andrzej Sapkowski,\n" +
+                        "Lauren Schmidt Hissrich",
+                    year: "2019",
                     description: "Der Hexer Geralt von Riva kämpft um einen Platz in der Welt und für Gold gegen gefährliche Monster. Gegen seinen Willen wird er in politische Intrigen und die Machenschaften der Zauberin Yennefer von Vengerberg verwickelt.",
                     actor: "Henry Cavill (Geralt von Riva)\n" +
                         "Anya Chalotra (Yennefer)\n" +
