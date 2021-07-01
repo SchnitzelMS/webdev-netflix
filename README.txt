@@ -1,2 +1,5 @@
-Indem man in der repository.js file einen neuen Film mit allen erforderlichen Feldern in die GetFilms funktion einfügt, werden neue Filme der Repository hinzugefügt.
-Filme die in der repository bestehen werden beim nächsten Seitenaufruf in der jeweiligen liste angezeigt.
+In der funktion GetFilms in der repository.js Datei, kann man neue Filme unter "films:" hinzufügen, in dem man alle
+ensprechenden Felder ausfüllt, das Ganze mit einer Geschweiften Klammer umschließt und mit einem Komma zu dem vorgehenden
+eintrag trennt.
+
+An der gleichen Stelle können auch neue Listen hinzugefügt werden, der Name dieser wird in "title geschrieben".
