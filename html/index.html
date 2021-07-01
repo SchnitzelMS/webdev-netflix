@@ -21,9 +21,13 @@
 
 <!-- details page -->
 
-<div data-bind="visible: infoEnabled">
-    <h1 style="color: white">djhsfkgasdfgasj</h1>
-
+<div data-bind="visible: infoEnabled, with: current" class="info-site">
+    <h1 style="color: white" data-bind="text: name"></h1>
+    <img data-bind="attr: {src: $data.picture, alt: $data.name}"/>
+    <p data-bind="text: year"></p>
+    <p>Director: <span data-bind="text: director"></span></p>
+    <p>Actor: <span data-bind="text: actor"></span></p>
+    <span data-bind="text: description"></span>
 </div>
 
 
