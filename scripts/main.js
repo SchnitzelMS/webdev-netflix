@@ -1,13 +1,13 @@
 //Main ViewModel
 function AppViewModel() {
-    var self = this;
+    let self = this;
     self.film_list = ko.mapping.fromJS(GetFilms());
     self.current = ko.observable(null);
     self.infoEnabled = ko.observable(false);
 
     self.loadDetails = function (film) {
         self.current(film);
-        var modal = bootstrap.Modal.getOrCreateInstance(document.querySelector('#myModal'));
+        let modal = bootstrap.Modal.getOrCreateInstance(document.querySelector('#myModal'));
         modal.show();
     }
 

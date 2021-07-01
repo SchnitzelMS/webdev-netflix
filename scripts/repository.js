@@ -6,7 +6,6 @@ function GetFilms() {
             title: "Neue Filme",
             films: [
                 {
-                    id: "1",
                     name: "2010 Das Jahr, in dem wir Kontakt aufnahmen",
                     director: "Keine Ahnung",
                     year: "19xx",
@@ -38,9 +37,8 @@ function GetFilms() {
             title: "Derzeit beliebt",
             films: [
                 {
-                    id: "1",
-                    name: "dsa",
-                    director: "dsafg",
+                    name: "Brooklyn 99",
+                    director: " Andy Samberg, Norm Hiscock, Sierra Teller Ornelas, Neil Campbell, Carol Kolb",
                     year: "2021",
                     description: "Detective Jake Peralta arbeitet im Polizeirevier 99 in Brooklyn. Er ist aufgeweckt, manchmal kindisch, aber dennoch ein ausgezeichneter Polizist. Auf dem Revier geht es chaotisch und unorthodox zu - bis zu dem Zeitpunkt, an dem der neue Chef Ray Holt die Zügel in die Hand nimmt. Er nimmt Vorschriften und seinen Job sehr ernst und verkörpert das genaue Gegenteil von Jake Peralta. Sein Ziel ist, den 99. Bezirk New Yorks zu einem sicheren Ort und den Chaotentrupp des Police Departments zu einer seriösen Abteilung zu machen. Nach einem anfänglichen Kleinkrieg zwischen den Mitarbeitern und ihrem neuen Chef beginnt das Team zusammenzuarbeiten, wobei es die Polizisten nicht immer schaffen, private Angelegenheiten strikt von beruflichen zu trennen.",
                     actor: "Andy Samberg (Jacob Peralta)\n" +
@@ -97,21 +95,30 @@ function GetFilms() {
                     picture: "../Resources/example06.jpg"
                 },
                 {
-                    id: "1",
-                    name: "dsa",
-                    director: "dsafg",
-                    year: "2021",
-                    description: "",
-                    actor: "",
-                    picture: "../Resources/example05.jpg"
+                    name: "Dark",
+                    director: "Quirin Berg, " +
+                        "Max Wiedemann, " +
+                        "Baran bo Odar, " +
+                        "Jantje Friese",
+                    year: "2017–2020",
+                    description: "Als zwei Kinder spurlos verschwinden, gerät in Dark, der ersten deutschen Netflix-Serie, das Leben von vier Kleinstadt-Familien aus den Fugen. Nach und nach stellt sich heraus, dass die Familien auf mysteriöse Weise miteinander verbunden sind und jedes einzelne Familienmitglied ein düsteres Geheimnis hat.",
+                    actor: "Louis Hofmann, Andreas Pietschmann, Dietrich Hollinderbäumer, Gina Stiebitz, Carina Wiese (2016) ",
+                    picture: "../Resources/example07.jpg"
                 },
                 {
-                    id: "1",
-                    name: "dsa",
-                    director: "dsafg",
+                    name: "Star Trek Discovery",
+                    director: "Bryan Fuller\n" +
+                        "David Semel",
                     year: "2021",
                     description: "",
-                    actor: "",
+                    actor: "Sonequa Martin-Green\n" +
+                        "Doug Jones\n" +
+                        "Shazad Latif\n" +
+                        "Anthony Rapp\n" +
+                        "Mary Wiseman\n" +
+                        "Jason Isaacs\n" +
+                        "Wilson Cruz\n" +
+                        "Anson Mount",
                     picture: "../Resources/example04.jpg"
                 }]
         }
